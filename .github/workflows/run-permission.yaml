@@ -19,6 +19,6 @@ jobs:
           submodules: recursive
 
       - name: Private Action
-        uses: ./.github/actions/private/workflow-permission@main
+        uses: ./.github/actions/private/workflow-permission
         with:
           users: lincolnnery
