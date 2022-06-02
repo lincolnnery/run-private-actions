@@ -1,3 +1,0 @@
-[submodule ".github/actions/private"]
-	path = .github/actions/private
-	url = https://github.com/lincolnnery/gh-actions.git
