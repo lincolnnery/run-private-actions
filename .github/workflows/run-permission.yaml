@@ -25,7 +25,7 @@ jobs:
       - name: Run My Action
         uses: ./.github/actions/workflow-permission
         with:
-          users: lincolnnery
+          users: lilico
 
 
 
