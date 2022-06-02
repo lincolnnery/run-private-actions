@@ -9,11 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-
-      - name: Checkout source code
-        uses: actions/checkout@v3 
-
-      - name: Private Action
-        uses: ./.github/actions/private/workflow-permission
+      # checkout this repo
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      # checkout the private repo containing the action to run
+      - name: Checkout GitHub Action Repo
+        uses: actions/checkout@v3
         with:
-          users: lincolnnery
+          repository: lincolnnery/gh-actions
+          path: .github/actions/workflow-permission
+      - name: Run My Action
+        uses: ./.github/actions/workflow-permission
+
+
+
+
+#      - name: Checkout source code
+#        uses: actions/checkout@v3 
+#
+#      - name: Private Action
+#        uses: ./.github/actions/private/workflow-permission
+#        with:
+#          users: lincolnnery
