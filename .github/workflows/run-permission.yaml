@@ -18,6 +18,10 @@ jobs:
         with:
           repository: lincolnnery/gh-actions
           path: .github/actions/workflow-permission
+      - name: Upload to S3 Dev
+        run: |
+          ls -la /home/runner/work/run-private-actions/run-private-actions/.github/actions/workflow-permission
+
       - name: Run My Action
         uses: ./.github/actions/workflow-permission
 
