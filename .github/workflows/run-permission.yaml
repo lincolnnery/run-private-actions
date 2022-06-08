@@ -16,16 +16,17 @@ jobs:
       - name: Checkout GitHub Action Repo
         uses: actions/checkout@v3
         with:
-          repository: lincolnnery/gh-actions
-          path: .github/actions/workflow-permission
+          repository: lincolnnery/action-manual-approval
+          path: .github/actions/action-manual-approval
       - name: ls dir
         run: |
-          ls -la /home/runner/work/run-private-actions/run-private-actions/.github/actions/workflow-permission
+          ls -la /home/runner/work/run-private-actions/run-private-actions/.github/actions/action-manual-approval
 
       - name: Run My Action
-        uses: ./.github/actions/workflow-permission
+        uses: ./.github/actions/action-manual-approval
         with:
-          users: lilico
+          approvers: lincolnnery
+          minimum-approvals: 1
 
 
 
